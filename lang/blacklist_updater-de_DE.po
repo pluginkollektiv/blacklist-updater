@@ -1,0 +1,23 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Blacklist Updater\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Sergej Müller\n"
+"Language-Team: Sergej Müller\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: .\n"
+
+msgid "Automatic updating of the <a href='options-discussion.php'>comment blacklist</a> in WordPress with antispam keys from <a href='https://github.com/splorp/wordpress-comment-blacklist' target='_blank'>GitHub</a>."
+msgstr "Automatische Aktualisierung der <a href='options-discussion.php'>Kommentar-Blacklist</a> in WordPress mit Antispam-Werten aus <a href='https://github.com/splorp/wordpress-comment-blacklist' target='_blank'>GitHub</a>."
+
+msgid "Next check in"
+msgstr "Nächste Prüfung in"
+
