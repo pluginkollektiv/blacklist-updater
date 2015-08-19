@@ -1,20 +1,18 @@
-=== Blacklist Updater ===
-Contributors: pluginkollektiv
-Tags: spam, antispam, comments, discussion, blacklist
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZAQUT9RLPW8QN
-Requires at least: 3.8
-Tested up to: 4.2.2
-Stable tag: trunk
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-
-
+# Blacklist Updater #
+* Contributors:      pluginkollektiv
+* Tags:              spam, antispam, comments, discussion, blacklist
+* Donate link:       https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8CH5FPR88QYML
+* Requires at least: 3.8
+* Tested up to:      4.3
+* Stable tag:        trunk
+* License:           GPLv2 or later
+* License URI:       http://www.gnu.org/licenses/gpl-2.0.html
+  
 
 Automatic updating of the comment blacklist in WordPress with antispam keys from GitHub.
 
 
-
-== Description ==
+## Description ##
 
 Few users are familiar with the comment blacklist built into WordPress. Located in the WordPress admin area under “Settings”—“Discussion”, that blacklist for incoming comments accepts values (words) to identify spam by.
 
@@ -24,49 +22,48 @@ Blacklist Updater has been developed to keep your comment blacklist in your Word
 
 The plugin will check the global comment blacklist on GitHub multiple times a day. Whenever new anti-spam values have been added to the global list, Blacklist Updater will read the global list and update your WordPress database accordingly. While the check-up process will run several times a day, the plugin will only update the database when it detects an actual change of the global comment blacklist on GitHub.
 
-
-= Requirements =
-* PHP 5.2.4
-* WordPress 3.8
-
-
-= Memory usage =
+### Memory usage ###
 * Back-end: ~ 0,04 MB
 * Front-end: ~ 0,02 MB
 
 
-= Languages =
+### Languages ###
 * German
 * English
 * Русский
 
 
-= Authors =
-* [Sergej Müller](http://wpcoder.de)
-* [Caspar Hübinger](http://glueckpress.com)
+### Credits ###
+* Author: [Sergej Müller](https://sergejmueller.github.io/)
+* Author: [Caspar Hübinger](http://glueckpress.com)
+* Maintainers: [pluginkollektiv](http://pluginkollektiv.org/)
 
-
-= Donuts =
+### Donuts ###
 * [Flattr](https://flattr.com/thing/536e5e2d0ce8de72eccc08731a4514e6)
 * [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZAQUT9RLPW8QN)
 
+## Installation ##
+* If you don’t know how to install a plugin for WordPress, [here’s how](http://codex.wordpress.org/Managing_Plugins#Installing_Plugins).
 
+### Requirements ###
+* PHP 5.2.4
+* WordPress 3.8
 
-== Changelog ==
+## Changelog ##
 
-= 0.0.3 / 21.04.2015 =
+### 0.0.3 / 21.04.2015 ###
 * WordPress 4.2 support
 * Russian translation
 
-= 0.0.2 =
+### 0.0.2 ###
 * Plugin refactoring
 * Moving to wordpress.org
 
-= 0.0.1 =
+### 0.0.1 ###
 * *Blacklist Updater* goes live
 
 
-== Installation ==
+## Installation ##
 
 * WordPress Dashboard > Plugins > Add New
 * Search for *Blacklist Updater* > Install
