@@ -188,7 +188,7 @@ class Blacklist_Updater
         return array_merge(
             $input,
             array(
-                '<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=ZAQUT9RLPW8QN" target="_blank">PayPal</a>',
+                '<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8CH5FPR88QYML" target="_blank">PayPal</a>',
                 '<a href="https://flattr.com/t/1323822" target="_blank">Flattr</a>',
                 sprintf(
                     '%s %s',

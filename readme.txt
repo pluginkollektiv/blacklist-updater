@@ -1,7 +1,7 @@
 === Blacklist Updater ===
 Contributors: pluginkollektiv
 Tags: spam, antispam, comments, discussion, blacklist
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZAQUT9RLPW8QN
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8CH5FPR88QYML
 Requires at least: 3.8
 Tested up to: 4.2.2
 Stable tag: trunk
@@ -48,7 +48,7 @@ The plugin will check the global comment blacklist on GitHub multiple times a da
 
 = Donuts =
 * [Flattr](https://flattr.com/thing/536e5e2d0ce8de72eccc08731a4514e6)
-* [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZAQUT9RLPW8QN)
+* [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8CH5FPR88QYML)
 
 
 
