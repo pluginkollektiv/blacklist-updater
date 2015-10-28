@@ -37,55 +37,55 @@ defined('ABSPATH') OR exit;
 
 /* Constants */
 define(
-    'BLACKLIST_UPDATER_BASE',
-    plugin_basename(__FILE__)
+	'BLACKLIST_UPDATER_BASE',
+	plugin_basename(__FILE__)
 );
 define(
-    'BLACKLIST_UPDATER_EVENT',
-    'blacklist_updater_refresh_data'
+	'BLACKLIST_UPDATER_EVENT',
+	'blacklist_updater_refresh_data'
 );
 
 
 /* Register */
 register_activation_hook(
-    __FILE__,
-    array(
-        'Blacklist_Updater',
-        'activation_hook'
-    )
+	__FILE__,
+	array(
+		'Blacklist_Updater',
+		'activation_hook'
+	)
 );
 register_deactivation_hook(
-    __FILE__,
-    array(
-        'Blacklist_Updater',
-        'deactivation_hook'
-    )
+	__FILE__,
+	array(
+		'Blacklist_Updater',
+		'deactivation_hook'
+	)
 );
 register_uninstall_hook(
-    __FILE__,
-    array(
-        'Blacklist_Updater',
-        'uninstall_hook'
-    )
+	__FILE__,
+	array(
+		'Blacklist_Updater',
+		'uninstall_hook'
+	)
 );
 
 
 /* Hooks */
 add_action(
-    BLACKLIST_UPDATER_EVENT,
-    array(
-        'Blacklist_Updater',
-        'refresh_data'
-    )
+	BLACKLIST_UPDATER_EVENT,
+	array(
+		'Blacklist_Updater',
+		'refresh_data'
+	)
 );
 add_filter(
-    'plugin_row_meta',
-    array(
-        'Blacklist_Updater',
-        'plugin_meta'
-    ),
-    10,
-    2
+	'plugin_row_meta',
+	array(
+		'Blacklist_Updater',
+		'plugin_meta'
+	),
+	10,
+	2
 );
 
 
@@ -93,13 +93,13 @@ add_filter(
 spl_autoload_register('blacklist_updater_autoload');
 
 function blacklist_updater_autoload($class) {
-    if ( in_array( $class, array('Blacklist_Updater') ) ) {
-        require_once(
-            sprintf(
-                '%s/inc/%s.class.php',
-                dirname(__FILE__),
-                strtolower($class)
-            )
-        );
-    }
+	if ( in_array( $class, array('Blacklist_Updater') ) ) {
+		require_once(
+			sprintf(
+				'%s/inc/%s.class.php',
+				dirname(__FILE__),
+				strtolower($class)
+			)
+		);
+	}
 }
