@@ -38,7 +38,7 @@ defined('ABSPATH') OR exit;
 /* Constants */
 define(
 	'BLACKLIST_UPDATER_BASE',
-	plugin_basename(__FILE__)
+	plugin_basename( __FILE__ )
 );
 define(
 	'BLACKLIST_UPDATER_EVENT',
@@ -90,15 +90,15 @@ add_filter(
 
 
 /* Autoload */
-spl_autoload_register('blacklist_updater_autoload');
+spl_autoload_register( 'blacklist_updater_autoload' );
 
-function blacklist_updater_autoload($class) {
-	if ( in_array( $class, array('Blacklist_Updater') ) ) {
+function blacklist_updater_autoload( $class ) {
+	if ( in_array( $class, array( 'Blacklist_Updater' ) ) ) {
 		require_once(
 			sprintf(
 				'%s/inc/%s.class.php',
-				dirname(__FILE__),
-				strtolower($class)
+				dirname( __FILE__ ),
+				strtolower( $class )
 			)
 		);
 	}

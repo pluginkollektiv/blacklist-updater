@@ -11,8 +11,7 @@ defined('ABSPATH') OR exit;
 * @since 0.0.2
 */
 
-class Blacklist_Updater
-{
+class Blacklist_Updater {
 
 
 	/**
@@ -22,8 +21,7 @@ class Blacklist_Updater
 	* @change  0.0.2
 	*/
 
-	public static function activation_hook()
-	{
+	public static function activation_hook() {
 		add_site_option(
 			'blacklist_updater',
 			array(
@@ -46,8 +44,7 @@ class Blacklist_Updater
 	* @change  0.0.2
 	*/
 
-	public static function deactivation_hook()
-	{
+	public static function deactivation_hook() {
 		wp_clear_scheduled_hook(
 			BLACKLIST_UPDATER_EVENT
 		);
@@ -61,8 +58,7 @@ class Blacklist_Updater
 	* @change  0.0.2
 	*/
 
-	public static function uninstall_hook()
-	{
+	public static function uninstall_hook() {
 		delete_site_option(
 			'blacklist_updater'
 		);
@@ -76,15 +72,14 @@ class Blacklist_Updater
 	* @change  0.0.2
 	*/
 
-	public static function refresh_data()
-	{
+	public static function refresh_data() {
 		/* Plugin options */
 		$options = get_site_option(
 			'blacklist_updater'
 		);
 
 		/* Etag header */
-		if ( ! empty($options['etag']) ) {
+		if ( ! empty( $options['etag'] ) ) {
 			$args = array(
 				'headers' => array(
 					'If-None-Match' => $options['etag']
@@ -95,8 +90,8 @@ class Blacklist_Updater
 		}
 
 		/* Output debug infos */
-		if ( defined('WP_DEBUG_LOG') && WP_DEBUG_LOG ) {
-			error_log('Comment Blacklist requested from GitHub');
+		if ( defined( 'WP_DEBUG_LOG ') && WP_DEBUG_LOG ) {
+			error_log( 'Comment Blacklist requested from GitHub' );
 		}
 
 		/* Start request */
@@ -108,7 +103,7 @@ class Blacklist_Updater
 		/* Exit on error */
 		if ( is_wp_error($response) ) {
 			if ( defined('WP_DEBUG_LOG') && WP_DEBUG_LOG ) {
-				error_log('Comment Blacklist response error: ' .$response->get_error_message());
+				error_log( 'Comment Blacklist response error: ' .$response->get_error_message() );
 			}
 
 			return;
@@ -193,7 +188,7 @@ class Blacklist_Updater
 				'<a href="https://flattr.com/t/1323822" target="_blank">Flattr</a>',
 				sprintf(
 					'%s %s',
-					esc_html__('Next check in', 'blacklist-updater'),
+					esc_html__( 'Next check in', 'blacklist-updater' ),
 					$scheduled
 				)
 			)
