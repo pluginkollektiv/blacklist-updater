@@ -192,7 +192,7 @@ class Blacklist_Updater
                 '<a href="https://flattr.com/t/1323822" target="_blank">Flattr</a>',
                 sprintf(
                     '%s %s',
-                    esc_html__('Next check in', 'blacklist_updater'),
+                    esc_html__('Next check in', 'blacklist-updater'),
                     $scheduled
                 )
             )
