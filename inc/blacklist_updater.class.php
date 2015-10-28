@@ -181,7 +181,8 @@ class Blacklist_Updater
         if ( $timestamp = wp_next_scheduled( BLACKLIST_UPDATER_EVENT ) ) {
             $scheduled = human_time_diff( time(), $timestamp );
         } else {
-            $scheduled = esc_html('Never');
+            // 'Never' is a core string appearing in wp-admin/includes/class-wp-ms-sites-list-table.php
+            $scheduled = esc_html__( 'Never' );
         }
 
         /* Plugin rows */
