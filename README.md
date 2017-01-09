@@ -3,7 +3,7 @@
 * Tags:              spam, antispam, comments, discussion, blacklist
 * Donate link:       https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8CH5FPR88QYML
 * Requires at least: 3.8
-* Tested up to:      4.6
+* Tested up to:      4.7
 * Stable tag:        trunk
 * License:           GPLv2 or later
 * License URI:       http://www.gnu.org/licenses/gpl-2.0.html
@@ -18,15 +18,6 @@ Additionally to plugins like [Antispam Bee](https://wordpress.org/plugins/antisp
 Blacklist Updater has been developed to keep your comment blacklist in your WordPress installation up to speed with the curated global list on GitHub.
 
 The plugin will check the global comment blacklist on GitHub multiple times a day. Whenever new anti-spam values have been added to the global list, Blacklist Updater will read the global list and update your WordPress database accordingly. While the check-up process will run several times a day, the plugin will only update the database when it detects an actual change of the global comment blacklist on GitHub.
-
-### Memory usage ###
-* Back-end: ~ 0.04 MB
-* Front-end: ~ 0.02 MB
-
-### Languages ###
-* English
-* German
-* Русский
 
 ### Support ###
 * Community support via the [support forums on wordpress.org](https://wordpress.org/support/plugin/blacklist-updater)
