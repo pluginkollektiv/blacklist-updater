@@ -184,8 +184,7 @@ class Blacklist_Updater {
 		return array_merge(
 			$input,
 			array(
-				'<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8CH5FPR88QYML" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Donate - PayPal', 'blacklist-updater' ) . '</a>',
-				'<a href="https://flattr.com/t/1323822" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Donate - Flattr', 'blacklist-updater' ) . '</a>',
+				'<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8CH5FPR88QYML" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Donate', 'blacklist-updater' ) . '</a>',
 				sprintf(
 					'%s %s',
 					esc_html__( 'Next check in', 'blacklist-updater' ),
