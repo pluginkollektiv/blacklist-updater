@@ -177,15 +177,15 @@ class Blacklist_Updater {
 			$scheduled = human_time_diff( time(), $timestamp );
 		} else {
 			// 'Never' is a core string appearing in wp-admin/includes/class-wp-ms-sites-list-table.php
-			$scheduled = esc_html__( 'Never' );
+			$scheduled = esc_html__( 'Never', 'blacklist-updater' );
 		}
 
 		/* Plugin rows */
 		return array_merge(
 			$input,
 			array(
-				'<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8CH5FPR88QYML" target="_blank">PayPal</a>',
-				'<a href="https://flattr.com/t/1323822" target="_blank">Flattr</a>',
+				'<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8CH5FPR88QYML" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Donate - PayPal', 'blacklist-updater' ) . '</a>',
+				'<a href="https://flattr.com/t/1323822" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Donate - Flattr', 'blacklist-updater' ) . '</a>',
 				sprintf(
 					'%s %s',
 					esc_html__( 'Next check in', 'blacklist-updater' ),
