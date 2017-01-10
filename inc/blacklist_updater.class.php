@@ -187,8 +187,8 @@ class Blacklist_Updater {
 				sprintf(
 					/* translators: %s: time until next check */
 					esc_html__( 'Next check in %s', 'blacklist-updater' ),
-					$scheduled,
-				)
+					$scheduled
+				),
 			)
 		);
 	}
