@@ -176,7 +176,6 @@ class Blacklist_Updater {
 		if ( $timestamp = wp_next_scheduled( BLACKLIST_UPDATER_EVENT ) ) {
 			$scheduled = human_time_diff( time(), $timestamp );
 		} else {
-			// 'Never' is a core string appearing in wp-admin/includes/class-wp-ms-sites-list-table.php
 			$scheduled = esc_html__( 'Never', 'blacklist-updater' );
 		}
 
@@ -185,11 +184,12 @@ class Blacklist_Updater {
 			$input,
 			array(
 				'<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8CH5FPR88QYML" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Donate', 'blacklist-updater' ) . '</a>',
+				'<a href="https://wordpress.org/support/plugin/blacklist-updater" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Support', 'blacklist-updater' ) . '</a>',
 				sprintf(
-					'%s %s',
-					esc_html__( 'Next check in', 'blacklist-updater' ),
+					/* translators: %s: time until next check */
+					esc_html__( 'Next check for a new blacklist in %s', 'blacklist-updater' ),
 					$scheduled
-				)
+				),
 			)
 		);
 	}
