@@ -42,6 +42,9 @@ The plugin will check the global comment blacklist on GitHub multiple times a da
 
 ## Changelog ##
 
+### 0.0.4 ###
+* Update donation link
+
 ### 0.0.3 ###
 * WordPress 4.2 support
 * Russian translation
