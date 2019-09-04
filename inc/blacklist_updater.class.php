@@ -183,7 +183,7 @@ class Blacklist_Updater {
 		return array_merge(
 			$input,
 			array(
-				'<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8CH5FPR88QYML" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Donate', 'blacklist-updater' ) . '</a>',
+				'<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=TD4AMD2D8EMZW" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Donate', 'blacklist-updater' ) . '</a>',
 				'<a href="https://wordpress.org/support/plugin/blacklist-updater" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Support', 'blacklist-updater' ) . '</a>',
 				sprintf(
 					/* translators: %s: time until next check */

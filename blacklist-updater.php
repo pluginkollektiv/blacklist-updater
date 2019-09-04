@@ -5,7 +5,7 @@ Text Domain: blacklist-updater
 Domain Path: /lang
 Description: Automatic updating of the <a href='options-discussion.php'>comment blacklist</a> in WordPress with antispam keys from <a href='https://github.com/splorp/wordpress-comment-blacklist' target='_blank'>GitHub</a>.
 Author:      pluginkollektiv
-Author URI:  http://pluginkollektiv.org
+Author URI:  https://pluginkollektiv.org
 Plugin URI:  https://wordpress.org/plugins/blacklist-updater/
 License:     GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html für

@@ -1,9 +1,9 @@
 # Blacklist Updater #
 * Contributors:      pluginkollektiv
 * Tags:              spam, antispam, comments, discussion, blacklist
-* Donate link:       https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8CH5FPR88QYML
+* Donate link:       https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=TD4AMD2D8EMZW
 * Requires at least: 3.8
-* Tested up to:      4.7
+* Tested up to:      5.2
 * Stable tag:        trunk
 * License:           GPLv2 or later
 * License URI:       http://www.gnu.org/licenses/gpl-2.0.html
@@ -31,7 +31,7 @@ The plugin will check the global comment blacklist on GitHub multiple times a da
 
 ### Credits ###
 * Author: [Sergej Müller](https://sergejmueller.github.io/)
-* Maintainers: [pluginkollektiv](http://pluginkollektiv.org/)
+* Maintainers: [pluginkollektiv](https://pluginkollektiv.org/)
 
 ## Installation ##
 * If you don’t know how to install a plugin for WordPress, [here’s how](http://codex.wordpress.org/Managing_Plugins#Installing_Plugins).
@@ -42,7 +42,7 @@ The plugin will check the global comment blacklist on GitHub multiple times a da
 
 ## Changelog ##
 
-### 0.0.3 / 21.04.2015 ###
+### 0.0.3 ###
 * WordPress 4.2 support
 * Russian translation
 
