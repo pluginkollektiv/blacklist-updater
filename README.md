@@ -42,6 +42,9 @@ The plugin will check the global comment blacklist on GitHub multiple times a da
 
 ## Changelog ##
 
+### 0.0.5 ###
+* Implement automated deployment
+
 ### 0.0.4 ###
 * Update donation link
 
