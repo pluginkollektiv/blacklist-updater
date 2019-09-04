@@ -9,7 +9,7 @@ Author URI:  https://pluginkollektiv.org
 Plugin URI:  https://wordpress.org/plugins/blacklist-updater/
 License:     GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html für
-Version:     0.0.3
+Version:     0.0.4
 */
 
 /*
