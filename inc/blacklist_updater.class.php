@@ -13,6 +13,23 @@ defined('ABSPATH') OR exit;
 
 class Blacklist_Updater {
 
+	/**
+	 * This is the original option key as it was used by WordPress up until
+	 * version 5.4.
+	 *
+	 * @var string
+	 */
+	const OLD_OPTION_KEY = 'blacklist_keys';
+
+	/**
+	 * Option key for storing the list of disallowed keys in the options
+	 * database.
+	 *
+	 * This new name is in use from WordPress 5.5 onwards.
+	 *
+	 * @var string
+	 */
+	const OPTION_KEY = 'disallowed_keys';
 
 	/**
 	* Plugin activation hook
@@ -123,9 +140,11 @@ class Blacklist_Updater {
 			error_log('Comment Blacklist successfully downloaded');
 		}
 
-		/* Update blacklist */
+		/* Update list of disallowed keys */
 		update_option(
-			'blacklist_keys',
+			version_compare( $GLOBALS['wp_version'], '5.5', '>=' )
+				? self::OPTION_KEY
+				: self::OLD_OPTION_KEY,
 			wp_remote_retrieve_body($response)
 		);
 
