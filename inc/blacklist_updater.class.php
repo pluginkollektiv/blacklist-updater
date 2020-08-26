@@ -13,6 +13,23 @@ defined('ABSPATH') OR exit;
 
 class Blacklist_Updater {
 
+	/**
+	 * This is the original option key as it was used by WordPress up until
+	 * version 5.4.
+	 *
+	 * @var string
+	 */
+	const OLD_OPTION_KEY = 'blacklist_keys';
+
+	/**
+	 * Option key for storing the list of disallowed keys in the options
+	 * database.
+	 *
+	 * This new name is in use from WordPress 5.5 onwards.
+	 *
+	 * @var string
+	 */
+	const OPTION_KEY = 'disallowed_keys';
 
 	/**
 	* Plugin activation hook
@@ -91,7 +108,7 @@ class Blacklist_Updater {
 
 		/* Output debug infos */
 		if ( defined( 'WP_DEBUG_LOG ') && WP_DEBUG_LOG ) {
-			error_log( 'Comment Blacklist requested from GitHub' );
+			error_log( 'Comment block list requested from GitHub' );
 		}
 
 		/* Start request */
@@ -103,7 +120,7 @@ class Blacklist_Updater {
 		/* Exit on error */
 		if ( is_wp_error($response) ) {
 			if ( defined('WP_DEBUG_LOG') && WP_DEBUG_LOG ) {
-				error_log( 'Comment Blacklist response error: ' .$response->get_error_message() );
+				error_log( 'Comment block list response error: ' .$response->get_error_message() );
 			}
 
 			return;
@@ -112,7 +129,7 @@ class Blacklist_Updater {
 		/* Check response code */
 		if ( wp_remote_retrieve_response_code($response) !== 200 ) {
 			if ( defined('WP_DEBUG_LOG') && WP_DEBUG_LOG ) {
-				error_log('Comment Blacklist is up to date');
+				error_log('Comment block list is up to date');
 			}
 
 			return;
@@ -120,18 +137,20 @@ class Blacklist_Updater {
 
 		/* Output debug infos */
 		if ( defined('WP_DEBUG_LOG') && WP_DEBUG_LOG ) {
-			error_log('Comment Blacklist successfully downloaded');
+			error_log('Comment block list successfully downloaded');
 		}
 
-		/* Update blacklist */
+		/* Update list of disallowed keys */
 		update_option(
-			'blacklist_keys',
+			version_compare( $GLOBALS['wp_version'], '5.5', '>=' )
+				? self::OPTION_KEY
+				: self::OLD_OPTION_KEY,
 			wp_remote_retrieve_body($response)
 		);
 
 		/* Output debug infos */
 		if ( defined('WP_DEBUG_LOG') && WP_DEBUG_LOG ) {
-			error_log('Comment Blacklist successfully updated');
+			error_log('Comment block list successfully updated');
 		}
 
 		/* Get & validate Etag */
@@ -187,7 +206,7 @@ class Blacklist_Updater {
 				'<a href="https://wordpress.org/support/plugin/blacklist-updater" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Support', 'blacklist-updater' ) . '</a>',
 				sprintf(
 					/* translators: %s: time until next check */
-					esc_html__( 'Next check for a new blacklist in %s', 'blacklist-updater' ),
+					esc_html__( 'Next check for a new block list in %s', 'blacklist-updater' ),
 					$scheduled
 				),
 			)
