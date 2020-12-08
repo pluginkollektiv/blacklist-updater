@@ -1,9 +1,9 @@
 # Blacklist Updater #
 * Contributors:      pluginkollektiv
-* Tags:              spam, antispam, comments, discussion, disallowed key, blocklist, blacklist
+* Tags:              spam, antispam, comments, discussion, disallowed comment keys, blocklist, blacklist
 * Donate link:       https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=TD4AMD2D8EMZW
 * Requires at least: 3.8
-* Tested up to:      5.4
+* Tested up to:      5.6
 * Stable tag:        trunk
 * License:           GPLv2 or later
 * License URI:       http://www.gnu.org/licenses/gpl-2.0.html
