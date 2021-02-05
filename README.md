@@ -5,7 +5,7 @@
 * Requires at least: 3.8
 * Tested up to:      5.6
 * Requires PHP:      5.2
-* Stable tag:        trunk
+* Stable tag:        1.0.0
 * License:           GPLv2 or later
 * License URI:       http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -34,14 +34,12 @@ The plugin will check the global comment blocklist on GitHub multiple times a da
 * Author: [Sergej Müller](https://sergejmueller.github.io/)
 * Maintainers: [pluginkollektiv](https://pluginkollektiv.org/)
 
-## Installation ##
-* If you don’t know how to install a plugin for WordPress, [here’s how](http://codex.wordpress.org/Managing_Plugins#Installing_Plugins).
-
-### Requirements ###
-* PHP 5.2.4 or greater
-* WordPress 3.8 or greater
 
 ## Changelog ##
+
+### 1.0.0 ###
+* Localize the plugin via Translate WordPress
+* Add code style check and make code compatible with WP CS
 
 ### 0.0.6 ###
 * WordPress 5.5/5.6 compatibility
