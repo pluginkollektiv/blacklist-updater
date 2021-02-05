@@ -1,0 +1,24 @@
+{
+  "name": "pluginkollektiv/blacklist-updater",
+  "description": "Automatic updating of the comment blocklist in WordPress with antispam keys from GitHub.",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0-or-later",
+  "require": {
+    "php": ">=5.2"
+  },
+  "require-dev": {
+    "php": ">=7.3",
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
+    "phpcompatibility/phpcompatibility-wp": "^2.1",
+    "squizlabs/php_codesniffer": "^3.5",
+    "wp-coding-standards/wpcs": "^2.3"
+  },
+  "scripts": {
+    "cs": [
+      "phpcs --standard=phpcs.xml -s"
+    ],
+    "csfix": [
+      "phpcbf --standard=phpcs.xml"
+    ]
+  }
+}
