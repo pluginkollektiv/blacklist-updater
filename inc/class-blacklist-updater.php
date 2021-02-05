@@ -33,6 +33,16 @@ class Blacklist_Updater {
 	const OPTION_KEY = 'disallowed_keys';
 
 	/**
+	 * Initialize the plugin.
+	 *
+	 * @since 1.0.0
+	 */
+	public static function init() {
+		// Load translations. Required due to support for WP versions before 4.6.
+		load_plugin_textdomain( 'blacklist-updater' );
+	}
+
+	/**
 	 * Plugin activation hook
 	 *
 	 * @since   0.0.2

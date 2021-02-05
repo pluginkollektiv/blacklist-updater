@@ -45,6 +45,9 @@ define(
 	'blacklist_updater_refresh_data'
 );
 
+/* Initialize the plugin. */
+add_action( 'plugins_loaded', array( 'Blacklist_Updater', 'init' ), 99 );
+
 /* Register */
 register_activation_hook(
 	__FILE__,
