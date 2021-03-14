@@ -195,9 +195,13 @@ class Blacklist_Updater {
 		/* Next update time */
 		$timestamp = wp_next_scheduled( BLACKLIST_UPDATER_EVENT );
 		if ( $timestamp ) {
-			$scheduled = human_time_diff( time(), $timestamp );
+			$scheduled = sprintf(
+				/* translators: %s: time until next check */
+				esc_html__( 'Next check for a new block list in %s', 'blacklist-updater' ),
+				human_time_diff( time(), $timestamp )
+			);
 		} else {
-			$scheduled = esc_html__( 'never', 'blacklist-updater' );
+			$scheduled = esc_html__( 'No check for a new block list scheduled', 'blacklist-updater' );
 		}
 
 		/* Plugin rows */
@@ -206,11 +210,7 @@ class Blacklist_Updater {
 			array(
 				'<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=TD4AMD2D8EMZW" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Donate', 'blacklist-updater' ) . '</a>',
 				'<a href="https://wordpress.org/support/plugin/blacklist-updater" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Support', 'blacklist-updater' ) . '</a>',
-				sprintf(
-					/* translators: %s: time until next check */
-					esc_html__( 'Next check for a new block list in %s', 'blacklist-updater' ),
-					$scheduled
-				),
+				$scheduled,
 			)
 		);
 	}
