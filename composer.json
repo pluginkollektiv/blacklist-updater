@@ -1,6 +1,6 @@
 {
   "name": "pluginkollektiv/blacklist-updater",
-  "description": "Automatic updating of the comment blocklist in WordPress with antispam keys from GitHub.",
+  "description": "Automatic updating of the comment block list in WordPress with antispam keys from GitHub.",
   "type": "wordpress-plugin",
   "license": "GPL-2.0-or-later",
   "require": {

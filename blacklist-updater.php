@@ -1,7 +1,7 @@
 <?php
 /**
- * Plugin Name: Blacklist Updater
- * Description: Automatic updating of the <a href='options-discussion.php'>comment blacklist</a> in WordPress with antispam keys from <a href='https://github.com/splorp/wordpress-comment-blacklist' target='_blank'>GitHub</a>.
+ * Plugin Name: Block List Updater
+ * Description: Automatic updating of the <a href='options-discussion.php'>comment block list</a> in WordPress with antispam keys from <a href='https://github.com/splorp/wordpress-comment-blacklist' target='_blank'>GitHub</a>.
  * Author:      pluginkollektiv
  * Author URI:  https://pluginkollektiv.org
  * Plugin URI:  https://wordpress.org/plugins/blacklist-updater/
@@ -10,7 +10,7 @@
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html für
  * Version:     1.0.0
  *
- * @package BlacklistUpdater
+ * @package BlockListUpdater
  */
 
 /*

@@ -1,6 +1,6 @@
-# Blacklist Updater #
+# Block List Updater #
 * Contributors:      pluginkollektiv
-* Tags:              spam, antispam, comments, discussion, disallowed comment keys, blocklist, blacklist
+* Tags:              spam, antispam, comments, discussion, disallowed comment keys, block list
 * Donate link:       https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=TD4AMD2D8EMZW
 * Requires at least: 3.8
 * Tested up to:      5.7
@@ -9,16 +9,16 @@
 * License:           GPLv2 or later
 * License URI:       http://www.gnu.org/licenses/gpl-2.0.html
 
-Automatic updating of the comment blocklist in WordPress with antispam keys from GitHub.
+Automatic updating of the comment block list in WordPress with antispam keys from GitHub.
 
 ## Description ##
-Few users are familiar with the comment blocklist built into WordPress. Located in the WordPress admin area under “Settings”—“Discussion”, that blocklist for incoming comments accepts values (words) to identify spam by.
+Few users are familiar with the comment block list built into WordPress. Located in the WordPress admin area under “Settings”—“Discussion”, that block list for incoming comments accepts values (words) to identify spam by.
 
-Additionally to plugins like [Antispam Bee](https://wordpress.org/plugins/antispam-bee/) in order to fight spam successfully a curated comment blocklist is recommendable. You can either update the list manually, or utilize a very detailed global [comment blocklist](https://github.com/splorp/wordpress-comment-blacklist) that gets updated on a regular basis.
+Additionally to plugins like [Antispam Bee](https://wordpress.org/plugins/antispam-bee/) in order to fight spam successfully a curated comment block list is recommendable. You can either update the list manually, or utilize a very detailed global [comment block list](https://github.com/splorp/wordpress-comment-blacklist) that gets updated on a regular basis.
 
-Blacklist Updater has been developed to keep your comment blocklist in your WordPress installation up to speed with the curated global list on GitHub.
+Block List Updater has been developed to keep your comment block list in your WordPress installation up to speed with the curated global list on GitHub.
 
-The plugin will check the global comment blocklist on GitHub multiple times a day. Whenever new anti-spam values have been added to the global list, Blacklist Updater will read the global list and update your WordPress database accordingly. While the check-up process will run several times a day, the plugin will only update the database when it detects an actual change of the global comment blocklist on GitHub.
+The plugin will check the global comment block list on GitHub multiple times a day. Whenever new anti-spam values have been added to the global list, Block List Updater will read the global list and update your WordPress database accordingly. While the check-up process will run several times a day, the plugin will only update the database when it detects an actual change of the global comment block list on GitHub.
 
 ### Support ###
 * Community support via the [support forums on wordpress.org](https://wordpress.org/support/plugin/blacklist-updater)
@@ -40,6 +40,7 @@ The plugin will check the global comment blocklist on GitHub multiple times a da
 ### 1.0.0 ###
 * Localize the plugin via Translate WordPress
 * Add code style check and make code compatible with WP CS
+* Rename plugin to *Block List Updater*
 
 ### 0.0.6 ###
 * WordPress 5.5/5.6 compatibility

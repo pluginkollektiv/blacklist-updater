@@ -2,7 +2,7 @@
 /**
  * Main plugin class
  *
- * @package BlacklistUpdater
+ * @package BlockListUpdater
  */
 
 /* Quit */
