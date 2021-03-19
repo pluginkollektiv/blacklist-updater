@@ -1,7 +1,11 @@
 # Directories
 /.github export-ignore
 /.wordpress-org export-ignore
+/vendor export-ignore
 
 # Files
 /.gitattributes export-ignore
 /.gitignore export-ignore
+/composer.json export-ignore
+/composer.lock export-ignore
+/phpcs.xml export-ignore
