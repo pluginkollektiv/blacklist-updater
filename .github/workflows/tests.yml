@@ -1,0 +1,16 @@
+name: Coding Standards
+on: push
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.0'
+          tools: composer
+      - name: Code style checks for PHP
+        run: |
+          composer install
+          composer cs
