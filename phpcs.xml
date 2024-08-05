@@ -11,7 +11,10 @@
 
 	<!-- Extend from WPCS ruleset -->
 	<config name="minimum_supported_wp_version" value="3.8"/>
-	<rule ref="WordPress"/>
+	<rule ref="WordPress">
+		<!-- as long as we declare PHP 5.2 compatibility, we should not "modernize" 5.3 features -->
+		<exclude name="Modernize.FunctionCalls.Dirname.FileConstant"/>
+	</rule>
 
 	<!-- Verify i18n text domain -->
 	<rule ref="WordPress.WP.I18n">

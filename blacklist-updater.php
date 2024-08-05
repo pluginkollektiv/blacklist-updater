@@ -98,12 +98,10 @@ spl_autoload_register( 'blacklist_updater_autoload' );
  */
 function blacklist_updater_autoload( $class ) {
 	if ( in_array( $class, array( 'Blacklist_Updater' ) ) ) {
-		require_once(
-			sprintf(
-				'%s/inc/class-%s.php',
-				dirname( __FILE__ ),
-				strtolower( str_replace( '_', '-', $class ) )
-			)
+		require_once sprintf(
+			'%s/inc/class-%s.php',
+			dirname( __FILE__ ),
+			strtolower( str_replace( '_', '-', $class ) )
 		);
 	}
 }
