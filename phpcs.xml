@@ -2,7 +2,7 @@
 <ruleset>
 	<description>Sniffs for the coding standards of the plugin</description>
 
-	<arg value="psvn"/>
+	<arg value="psv"/>
 	<arg name="colors"/>
 
 	<!-- Files to sniff -->
