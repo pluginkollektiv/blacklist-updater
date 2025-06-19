@@ -37,6 +37,11 @@ The plugin will check the global comment block list on GitHub multiple times a d
 
 ## Changelog ##
 
+### 1.0.2 ###
+* Tags reduced to 5
+* Minor internal adjustments to prevents warnings
+* WordPress 6.8 compatibility check
+
 ### 1.0.1 ###
 * Removed unsupported links from plugin description
 * Minor internal adjustments to meet WordPress coding standards
