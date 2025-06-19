@@ -1,6 +1,6 @@
 # Block List Updater #
 * Contributors:      pluginkollektiv
-* Tags:              spam, antispam, comments, discussion, disallowed comment keys, block list
+* Tags:              spam, antispam, comments, blocklist, blacklist
 * Donate link:       https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=TD4AMD2D8EMZW
 * Requires at least: 3.8
 * Tested up to:      6.6
