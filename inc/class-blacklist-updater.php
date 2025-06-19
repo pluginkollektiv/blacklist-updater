@@ -110,11 +110,7 @@ class Blacklist_Updater {
 			$args = array();
 		}
 
-		/* Output debug infos */
-		if ( defined( 'WP_DEBUG_LOG ' ) && WP_DEBUG_LOG ) {
-			// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
-			error_log( 'Comment block list requested from GitHub' );
-		}
+		self::debug_log( 'Comment block list requested from GitHub' );
 
 		/* Start request */
 		$response = wp_remote_get(
@@ -124,29 +120,19 @@ class Blacklist_Updater {
 
 		/* Exit on error */
 		if ( is_wp_error( $response ) ) {
-			if ( defined( 'WP_DEBUG_LOG' ) && WP_DEBUG_LOG ) {
-				// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
-				error_log( 'Comment block list response error: ' . $response->get_error_message() );
-			}
+			self::debug_log( 'Comment block list response error: ' . $response->get_error_message() );
 
 			return;
 		}
 
 		/* Check response code */
 		if ( wp_remote_retrieve_response_code( $response ) !== 200 ) {
-			if ( defined( 'WP_DEBUG_LOG' ) && WP_DEBUG_LOG ) {
-				// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
-				error_log( 'Comment block list is up to date' );
-			}
+			self::debug_log( 'Comment block list is up to date' );
 
 			return;
 		}
 
-		/* Output debug infos */
-		if ( defined( 'WP_DEBUG_LOG' ) && WP_DEBUG_LOG ) {
-			// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log 
-			error_log( 'Comment block list successfully downloaded' );
-		}
+		self::debug_log( 'Comment block list successfully downloaded' );
 
 		/* Update list of disallowed keys */
 		update_option(
@@ -156,11 +142,7 @@ class Blacklist_Updater {
 			wp_remote_retrieve_body( $response )
 		);
 
-		/* Output debug infos */
-		if ( defined( 'WP_DEBUG_LOG' ) && WP_DEBUG_LOG ) {
-			// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log 
-			error_log( 'Comment block list successfully updated' );
-		}
+		self::debug_log( 'Comment block list successfully updated' );
 
 		/* Get & validate Etag */
 		$etag = preg_replace(
@@ -218,5 +200,17 @@ class Blacklist_Updater {
 				$scheduled,
 			)
 		);
+	}
+
+	/**
+	 * Log error message, if WP_DEBUG is enabled.
+	 *
+	 * @param string $message Error message.
+	 */
+	private static function debug_log( $message ) {
+		if ( defined( 'WP_DEBUG_LOG' ) && WP_DEBUG_LOG ) {
+            // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
+			error_log( $message );
+		}
 	}
 }
