@@ -3,7 +3,7 @@
 * Tags:              spam, antispam, comments, blocklist, blacklist
 * Donate link:       https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=TD4AMD2D8EMZW
 * Requires at least: 3.8
-* Tested up to:      6.8
+* Tested up to:      6.9
 * Requires PHP:      5.2
 * Stable tag:        1.0.2
 * License:           GPLv2 or later
