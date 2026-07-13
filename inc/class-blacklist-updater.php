@@ -144,15 +144,12 @@ class Blacklist_Updater {
 
 		self::debug_log( 'Comment block list successfully updated' );
 
-		/* Get & validate Etag */
-		$etag = preg_replace(
-			'/^[a-f0-9"]$/',
-			'',
-			wp_remote_retrieve_header(
-				$response,
-				'etag'
-			)
-		);
+		/* Get & validate Etag (RFC 7232 entity-tag, weak or strong); invalid values are discarded, not repaired */
+		$etag = wp_remote_retrieve_header( $response, 'etag' );
+
+		if ( ! is_string( $etag ) || ! preg_match( '/^(W\/)?"[\x21\x23-\x7E\x80-\xFF]*"$/', $etag ) ) {
+			$etag = null;
+		}
 
 		/* Update options */
 		update_site_option(
