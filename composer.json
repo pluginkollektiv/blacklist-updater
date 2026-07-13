@@ -8,10 +8,11 @@
   },
   "require-dev": {
     "php": ">=7.3",
-    "dealerdirect/phpcodesniffer-composer-installer": "^v1.0",
+    "dealerdirect/phpcodesniffer-composer-installer": "^v1.2",
     "phpcompatibility/phpcompatibility-wp": "^2.1",
-    "squizlabs/php_codesniffer": "^3.10",
-    "wp-coding-standards/wpcs": "^3.1"
+    "phpunit/phpunit": "^9.6",
+    "squizlabs/php_codesniffer": "^3.13",
+    "wp-coding-standards/wpcs": "^3.3"
   },
   "scripts": {
     "cs": [
@@ -19,6 +20,9 @@
     ],
     "csfix": [
       "phpcbf --standard=phpcs.xml"
+    ],
+    "test": [
+      "phpunit"
     ]
   },
   "config": {

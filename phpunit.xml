@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phpunit bootstrap="test/bootstrap.php">
+  <coverage processUncoveredFiles="true">
+    <include>
+      <directory suffix=".php">./inc/</directory>
+    </include>
+  </coverage>
+  <testsuites>
+    <testsuite name="Block List Updater TestSuite">
+      <directory suffix="_Test.php">./test/</directory>
+    </testsuite>
+  </testsuites>
+</phpunit>
