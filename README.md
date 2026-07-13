@@ -35,6 +35,12 @@ The plugin will check the global comment block list on GitHub multiple times a d
 * Maintainers: [pluginkollektiv](https://pluginkollektiv.org/)
 
 
+## Frequently Asked Questions ##
+
+### How can I report security bugs? ###
+You can report security bugs through the Patchstack Vulnerability Disclosure Program. The Patchstack team help validate, triage and handle any security vulnerabilities. [Report a security vulnerability.](https://patchstack.com/database/vdp/ff9accd7-0353-479d-8382-a24617c44c61)
+
+
 ## Changelog ##
 
 ### 1.0.2 ###
