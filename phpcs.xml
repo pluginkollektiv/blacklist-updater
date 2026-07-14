@@ -19,7 +19,9 @@
 	<!-- Verify i18n text domain -->
 	<rule ref="WordPress.WP.I18n">
 		<properties>
-			<property name="text_domain" type="array" value="blacklist-updater"/>
+			<property name="text_domain" type="array">
+				<element value="blacklist-updater"/>
+			</property>
 		</properties>
 	</rule>
 
